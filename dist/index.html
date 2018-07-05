@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Location de vélos à Lyon</title>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+</head>
+
+<body>
+	<header>
+		<h1>Location de vélos à Lyon</h1>
+	</header>
+
+	<div id="container">
+		<section>
+			<div id="slider">
+				<div id="prec"><i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i></div>
+				<ul>
+					<li id="slide1">
+						<img />
+						<span id="description_slide">
+							
+						</span>
+					</li>
+				</ul>
+				<div id="suiv"><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></div>
+			</div>
+		</section>
+
+		<section>
+			<div id="stations">
+				<div id="map"></div>
+
+				<div id="detail_station">
+					<fieldset>
+						<legend>Détails de la station <span id="nom_station"></span></legend>
+						<p><strong>Adresse</strong> : <span id="adresse"></span></p>
+						<p><strong>Etat</strong> : <span id="etat"></span></p>
+						<p><strong>Nombre de vélos</strong> : <span id="nb_velos"></span></p>
+						<p><strong>Vélos disponibles</strong> : <span id="velos_disponibles"></span></p>
+						<div id="bouton_reservation"></div>
+					</fieldset>
+					<div id="signature">
+						<div id="confirmeStation"></div><br />
+						<strong>Signature :</strong><br />
+						<canvas id="canvas" width="300" height="300"></canvas>
+						<div id="validation_signature">
+							<button id="validation">Valider</button> | <button id="reinitialisation">Reinitialiser</button><br />
+							<span id="signature_message"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<p id="reservation_ok"></p>
+		</footer>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0zdrVMnnoE0Ya6jDwzCs-EVK76s9-P5M" async defer></script>
+	<script type="module" src="bundle.js"></script>
+</body>
+</html>
